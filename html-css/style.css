@@ -1,0 +1,53 @@
+@import "./reset.css";
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+}
+.icon {
+  background: url(https://t1.kakaocdn.net/estoreweb/images/20210517141516/ico_comm_201125.png)
+    no-repeat;
+  background-size: 830px 230px;
+}
+.hamberger {
+  width: 24px;
+  height: 24px;
+  background-position: -210px -30px;
+}
+.logo {
+  width: 190px;
+  height: 28px;
+  background-position: -210px 0;
+}
+
+.search {
+  width: 24px;
+  height: 24px;
+  background-position: -260px -30px;
+}
+.my {
+  width: 24px;
+  height: 24px;
+  background-position: -210px -30px;
+}
+
+.header-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.header-bottom > ul {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}

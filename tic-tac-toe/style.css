@@ -10,6 +10,7 @@ body {
   height: 100%;
   background: rgb(23, 184, 212);
   padding-top: 150px;
+  box-sizing: border-box;
 }
 
 .container {
@@ -38,4 +39,42 @@ body {
 
 .header-score {
   font-size: 2rem;
+}
+
+.display {
+  width: 450px;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+.display-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.display-row {
+  display: flex;
+}
+.display-space {
+  border: 3px solid rgb(228, 207, 159);
+  width: 150px;
+  height: 150px;
+}
+
+.clicked {
+  pointer-events: none;
+  position: relative;
+  font-size: 110px;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.clicked.mark-o {
+  color: rgb(9, 94, 109);
+}
+.clicked.mark-x {
+  color: white;
 }

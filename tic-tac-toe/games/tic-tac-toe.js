@@ -1,11 +1,11 @@
 const createInitPanel = () => [
-  ["", "", ""],
-  ["", "", ""],
+  ["O", "X", "X"],
+  ["O", "X", ""],
   ["", "", ""],
 ];
 
 const state = {
-  display: createInitPanel(),
+  board: createInitPanel(),
   score: [0, 0],
   turn: "x",
 };
@@ -14,6 +14,7 @@ const createTicTacToe = () => {
   const ticTacToe = document.createElement("div");
   ticTacToe.classList.add("container");
   ticTacToe.appendChild(createHeader());
+  ticTacToe.appendChild(createDisplay());
   return ticTacToe;
 };
 
@@ -35,8 +36,34 @@ const drawHeader = (header) => {
 
 const createDisplay = () => {
   const display = document.createElement("div");
+  display.classList.add("display");
   drawDisplay(display);
+  return display;
 };
-const drawDisplay = () => {};
 
+const drawDisplay = (display) => {
+  const { board } = state;
+
+  display.innerHTML = `
+  <div class="display-container">
+    ${board
+      .map(
+        (row) =>
+          `<div class="display-row">${row
+            .map(
+              (space) =>
+                `<div class="display-space ${spaceForm[space]}">${space}</div>`
+            )
+            .join("")}</div>`
+      )
+      .join("")}
+  </div>
+
+  `;
+};
+const spaceForm = {
+  X: "clicked mark-x",
+  O: "clicked mark-o",
+  "": "",
+};
 export default createTicTacToe;

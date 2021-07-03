@@ -24,6 +24,7 @@ const render = () => {
   game.innerHTML = "";
   game.appendChild(createHeader());
   game.appendChild(createDisplay());
+  game.appendChild(createFooter());
 };
 
 const clearBoard = () => {
@@ -41,8 +42,9 @@ const drawHeader = (header) => {
 
   header.innerHTML = `
     <h1 class="header-title">TIC TAC TOE</h1>
-    <div class="header-turn">${turn === "x" ? "X 의 차례" : "O의 차례"} </div>
-    <div class="header-score">X ${score[0]} : O ${score[1]}</div>`;
+    <div class="header-turn">
+    <b>${turn === "X" ? "X" : "O"}</b> 의 차례 </div>
+    <div class="header-score">X ${score[0]}점 : O ${score[1]}점</div>`;
 };
 
 const createDisplay = () => {
@@ -110,6 +112,36 @@ const refereGame = () => {
     if (board[0][2] !== "") return board[0][2];
   }
 };
+
+const createFooter = () => {
+  const footer = document.createElement("footer");
+  footer.classList.add("footer");
+  drawFooter(footer);
+  setFooterAction(footer);
+  return footer;
+};
+
+const drawFooter = (footer) => {
+  footer.innerHTML = `
+  <div class="footer-newGame">NEW GAME</div>
+  <div class="footer-resetGame">RESET GAME</div>
+`;
+};
+
+const setFooterAction = (footer) => {
+  footer.addEventListener("click", ({ target }) => {
+    if (target.classList.contains("footer-newGame")) {
+      state.board = initBoard();
+      state.score = [0, 0];
+      state.turn = "X";
+      render();
+    } else if (target.classList.contains("footer-resetGame")) {
+      state.board = initBoard();
+      render();
+    }
+  });
+};
+
 const spaceForm = {
   X: "clicked mark-x",
   O: "clicked mark-o",

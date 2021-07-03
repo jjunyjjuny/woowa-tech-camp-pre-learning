@@ -3,7 +3,30 @@
 * {
   box-sizing: border-box;
 }
-
+.bg-gray {
+  background: #f5f5f5;
+}
+.bg-pink {
+  background: rgb(249, 124, 124);
+}
+.bg-blue {
+  background: rgb(92, 184, 253);
+}
+.bg-beige {
+  background: rgb(217, 170, 150);
+}
+.color-pink {
+  color: rgb(249, 124, 124);
+}
+.color-blue {
+  color: rgb(92, 184, 253);
+}
+.color-beige {
+  color: rgb(217, 170, 150);
+}
+.pt {
+  padding: 5rem;
+}
 .header {
   width: 100%;
 }
@@ -91,10 +114,11 @@ main {
 }
 
 .article {
-  margin-bottom: 4rem;
+  margin: 4rem 0;
   display: flex;
   justify-content: center;
 }
+
 .article-container {
   max-width: 1080px;
   width: 90%;
@@ -170,4 +194,40 @@ main {
 
 .hotItem > ol > li > .hotItem-thumbnail > img {
   width: 100%;
+}
+
+.style > div {
+  width: 100%;
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.style > div > .tags {
+  flex: 1;
+  font-weight: bold;
+}
+
+.style > div > .tags > div:first-child {
+  font-size: 1.3rem;
+
+  margin-bottom: 1rem;
+}
+.style > div > .tags > div:last-child {
+  display: inline-block;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.style > div > ul {
+  display: flex;
+  flex: 5;
+}
+
+.style > div > ul > li {
+  width: 20%;
+}
+
+.style > div > ul > li > img {
+  width: 80%;
 }

@@ -1,0 +1,41 @@
+@import "./reset.css";
+
+html,
+body {
+  height: 100%;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  background: rgb(23, 184, 212);
+  padding-top: 150px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  color: white;
+  text-align: center;
+}
+.header-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+}
+
+.header-turn {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.header-score {
+  font-size: 2rem;
+}

@@ -1,8 +1,12 @@
+import GAMES from "./games/games.js";
+
 window.addEventListener("DOMContentLoaded", () => {
-  startGame("ticTacToe");
+  startGame("tictactoe");
 });
 
-const startGame = (game) => {
-  const app = document.getElementById("app");
-  app.appendChild(GAME[game]);
+const app = document.getElementById("app");
+
+const startGame = (gameName) => {
+  const game = GAMES[gameName]();
+  app.appendChild(game);
 };

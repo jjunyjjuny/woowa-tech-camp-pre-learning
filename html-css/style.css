@@ -84,3 +84,90 @@ main {
   width: auto;
   height: 100%;
 }
+
+.section-contents {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.article {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.article-container {
+  max-width: 1080px;
+  width: 90%;
+}
+
+.article-container h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.newItem {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.newItem > li {
+  width: 18%;
+  box-shadow: 0 0 10px rgb(209, 209, 209);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.newItem > li > img {
+  width: 70%;
+}
+
+.newItem > li > h4 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.toptier {
+  color: red;
+}
+.hotItem {
+  display: flex;
+  justify-content: space-between;
+}
+.hotItem > ol {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.hotItem > ol > li {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.hotItem > ol > li > .hotItem-rank {
+  flex: 1;
+  font-size: 2rem;
+}
+
+.hotItem > ol > li > .hotItem-content {
+  flex: 4;
+}
+.hotItem > ol > li > .hotItem-content > h4 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hotItem > ol > li > .hotItem-content > h5 {
+  color: rgb(131, 131, 131);
+}
+.hotItem > ol > li > .hotItem-thumbnail {
+  flex: 1;
+}
+
+.hotItem > ol > li > .hotItem-thumbnail > img {
+  width: 100%;
+}
